@@ -2,8 +2,12 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
+app.get("/", (req, res) => {
+  res.send("API by Eren is up and running. Status: Smooth.");
+});
 
-const IMGBB_API_KEY = '99f462715e8971ac0db7d3d4223023d1'; // Replace with your key
+
+const IMGBB_API_KEY = 'your_imgbb_api_key'; // Replace with your key
 
 app.get('/upload', async (req, res) => {
   const imageUrl = req.query.link;
